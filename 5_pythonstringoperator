@@ -1,0 +1,20 @@
+# PYTHON STRING OPERATOR -- Python sequence types
+# Python 3 has 5 built-in sequence types,as,
+# 1. the string type
+# 2. list
+# 3. tuple
+# 4. range
+# 5. bytes and bytearray
+
+# What is a sequence - order set of items e.g. "Hello World" contains 11 items, and each item is a character
+# List is also a sequence - e.g. ["computer", "mouse", "keyboard", "mouse"] ,
+# ie. the list contain 5 items, each of which is a string.
+
+# Note: Indexing is very important in sequence .. as Sequence is ordered.
+# One can use indexes to access individual items in the sequence.
+
+computer_parts = ["computer", "mouse", "keyboard", "mouse"]
+print(computer_parts[0][0])
+print(computer_parts[1][2])
+print(computer_parts[0])
+print(computer_parts[1])
