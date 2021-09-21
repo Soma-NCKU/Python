@@ -1,0 +1,32 @@
+splitString = "This string has been \nsplit over\nseveral\nlines"
+print(splitString)
+
+tabbedString = "1\t2\t3\t4"
+print(tabbedString)
+
+print('Number 1 \tThe Larch \nNumber 2 \tThe Horse Chestnut')
+
+print("C:\\Users\\timbuchalka\\notes.txt")
+print(r"C:\Users\timbuchalka\notes.txt")
+
+greeting = "Hello"   # variable greeting is bound to a string   and notes greeting != Greeting
+#name = input("Please enter your name: ")  # variable name is bound to a string
+
+## if we want a space, we can add that too
+#print(greeting + ' ' + name)
+
+age = 24
+print(age)
+print(type(age))
+
+# print("Soma is " + age + " " + "years old")
+
+# TypeError: can only concatenate str (not "int") to str
+
+age = "2 years"
+print(age)
+print(type(age))
+
+
+age_in_words = "2 years"
+print("Soma is " + age + ' ' + "old")
