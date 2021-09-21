@@ -1,0 +1,56 @@
+# Python has several built-in data types, that are classified as,
+# 1. numeric
+# 2. iterator
+# 3. sequence (which are also iterates)
+# 4. mapping
+# 5. file
+# 6. class
+# 7. exception
+
+
+# str type - we have already seen is previous exercises
+
+# Here we will focus on Numeric data type. - int ( whole number )  - float (decimal number)
+
+# Remember - Python 3 int effectively has no maximum size , therefore you can come across a scenrio where you will
+# run out of memory before you exceed the size limit.
+
+# Note - Python does not have type declarations (where you specify the type of a variable before you can use it).
+# But it is something you need to consider when you are writing programs.
+
+
+# Numeric operator
+
+a = 12
+b = 3
+
+print(a+b)  # ans - 15
+print(a-b)  # ans - 9
+print(a * b) # ans - 36
+print(a/b) # ans 4.0
+print(a//b) # ans - 4 integer division, round down towards minus infinity
+print(a % b) # 0 module: the reminder after integer division
+
+print()
+
+for i in range(1, a//b):
+    print(i)
+
+# TypeError: 'float' object cannot be interpreted as an integer  - if the range is typed as range(1, a/b)
+# this is an example that python is strongly typed - we cant float where a int must be used.
+
+
+# Expression - eg -  a , b, 12, 3, a+b , a-b, a*b, ... line 36 we have 1 , (a//b) = 4, and
+# range(1, a//b) is also an experssion as python has to evaluate a range of experssion from 1 to 4,
+# and finally print(i) is also an experssion
+# total there as - 26 experssion
+
+# OPERATOR PRECEDENCE -
+## PEMDAS - Parentheses, Exponents, (Multiplication/Division), (Addition/Substraction)
+print()
+
+print(a + b / 3 - 4 * 12)
+print(a + (b / 3) - (4 * 12))
+print((((a+b)/3)-4) * 12)
+print(((a + b)/3 - 4) * 12)
+
