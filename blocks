@@ -1,0 +1,36 @@
+for i in range(1, 13):
+    print("No. {} squared is {} and cubed us {:4}". format(i, i**2, i**3))
+print("*" * 80)
+
+print()
+
+for i in range(1, 13):
+    print("No. {} squared is {} and cubed us {:4}". format(i, i**2, i**3))
+    print("*" * 80)
+
+#name = input("Please enter your name: ")
+#age = input("How old are you, {0}?".format(name))
+#print(age)
+
+print()
+
+# Use replacement fields
+name = input("Please enter your name: ")
+age = int(input("How old are you, {0}?".format(name)))
+print(age)
+
+# Let's use condition
+if age >= 18:
+    print("You are old enough to vote")
+    print("Please put an X in the box")
+else:
+    print("Please come back in {} years to vote".format(18-age))
+
+if age < 18:
+    print("Please come back in {} years".format(18 - age))
+elif age == 20:
+    print("You are good to go")
+else:
+    print("You are old to vote")
+
+
