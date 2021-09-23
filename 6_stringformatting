@@ -31,3 +31,14 @@ print("Soma is " + str(age) + " years old")
 
 # or another way is
 print(f"Soma is {age} years old ")
+
+
+# Python 2 String Interpolation - this will work only in Python 2
+
+age = 24
+print("My age is %d years" % age)
+
+major = "years"
+minor = "months"
+print("My age is %d %s, %d %s" (age, major, 6, minor))
+print("PI is approximately %f" %(22/7))
