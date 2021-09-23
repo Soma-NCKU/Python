@@ -1,0 +1,33 @@
+# Without formatting
+for i in range(1, 13):
+    print("No. {0} squared is {1} and cubed is {2}".format(i, i**2, i**3))
+
+print()
+
+# With formatting
+
+# default it is right aligned
+for i in range(1, 13):
+    print("No. {0:2} squared is {1:4} and cubed is {2:4}".format(i, i**2, i**3))
+    # {0:2} - {index:reserves places on the screen}
+
+print()
+
+# left aligned
+for i in range(1, 13):
+    print("No. {0:<2} squared is {1:<4} and cubed is {2:<4}".format(i, i**2, i**3))
+    # {0:2} - {index:reserves places on the screen}
+
+print()
+
+# center aligned
+for i in range(1, 13):
+    print("No. {0:^2} squared is {1:^4} and cubed is {2:^4}".format(i, i**2, i**3))
+    
+# Python 3.6 has introduced another way of formatting using f-strings
+age = 2
+#print("Soma is " + age + ' ' + "old")  # TypeError: can only concatenate str (not "int") to str
+print("Soma is " + str(age) + " years old")
+
+# or another way is
+print(f"Soma is {age} years old ")
