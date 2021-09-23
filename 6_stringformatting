@@ -42,3 +42,17 @@ major = "years"
 minor = "months"
 print("My age is %d %s, %d %s" (age, major, 6, minor))
 print("PI is approximately %f" %(22/7))
+
+
+# Mini Challenge
+# Given a string
+data = "1:A, 2:B, 3:C, 4:D, 5:E, 6:F, 7:G, 8:H"
+print(data)
+
+# we want to slice the string to extract just the digits.
+# which of these slices will "NOT" do what we want?
+
+print(data[::5])   # every 5 position digit is displayed
+print(data[1:5])   # display digit from 1-4
+print(data[0:-1:5]) # every 5 position digit is displayed but using -ve indexing
+print(data[:-1:5]) # same as previous example
