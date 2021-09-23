@@ -1,0 +1,9 @@
+# Extract capital numbers
+string = "Alright, but apart from the Sanitation, the Medicine, Education, Wine, Public Order," \
+         "Irrigation, Roads, the FResh-Water System, and Public Health, what have the Romans ever done for us?"
+uppercase = ""
+for char in string:
+    if char.isupper():
+        uppercase = uppercase + char
+
+print(uppercase)
