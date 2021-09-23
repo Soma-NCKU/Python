@@ -1,0 +1,4 @@
+# Iterating over a range
+
+for i in range(1, 21):       # note the range will count from 1 upto 19 only
+    print("i is now {}".format(i))
