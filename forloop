@@ -1,0 +1,56 @@
+# Python provides several ways to repeat a block of code - things like:
+# 1. for loops 2. while loops
+# 3. list comprehensions and generator expressions
+
+# we focus only on for loop - a for loop works by iterating over some set of values.
+# The set of values comes from a sequence, or some other iterable objects.
+# We have seen one sequence type - "string" type and one iterable type - "range".
+# Sequence is also an iterable.
+
+parrot = "Norwegian Blue"
+
+# for variable_name in another_variable:
+for character in parrot:
+    print(character)
+
+# Another example we see examine how each character in the number string to check if it's a digit or not
+# As we saw in the previous video, a for loop can be used to do that.
+# we are going to iterate over numbers, and append anything that isnt a digit to the separators string.
+number = "9,223;372:036 854,775;807"
+separators = number[1::4]
+print(separators)
+
+print()
+
+numbers = "9,223;372:036 854,775;807"
+separatorss = ""
+
+for char in numbers:
+    if not char.isnumeric():                   # not False -> move next line whereas not True -> move back to first
+        separatorss = separatorss + char
+
+print(separatorss)
+
+values = "".join(char if char not in separatorss else "" for char in numbers).split()
+print([int(val) for val in values])
+
+
+# Some examples to understand isnumeric()
+#The isnumeric() method returns:
+
+# True if all characters in the string are numeric characters.
+# False if at least one character is not a numeric character.
+s = '1242323'
+print(s.isnumeric())
+
+#s = '²3455'
+s = '\u00B23455'
+print(s.isnumeric())
+
+# s = '½'
+s = '\u00BD'
+print(s.isnumeric())
+
+s = '1242323'
+s='python12'
+print(s.isnumeric())
