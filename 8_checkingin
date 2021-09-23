@@ -1,0 +1,20 @@
+# Check the webpage - https://docs.python.org/3/library/
+
+# "in" is used in sequences
+parrot = "Norwegian Blue"
+
+letter = input("Enter a character: ")
+
+if letter in parrot:
+    print("{} is in {}".format(letter, parrot))
+else:
+    print("I dont need that letter")
+
+# "not in"
+activity = input(" What would you like to do today? ")
+
+# '.casefold()' - convert a given string in lower case
+if 'cinema' not in activity.casefold():
+    print("But I want to got to the cinema")
+else:
+    print("Hey! I am going to cinema ...")
