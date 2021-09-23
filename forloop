@@ -31,7 +31,7 @@ for char in numbers:
 
 print(separatorss)
 
-values = "".join(char if char not in separatorss else "" for char in numbers).split()
+values = "".join(char if char not in separatorss else " " for char in numbers).split()
 print([int(val) for val in values])
 
 
