@@ -1,0 +1,11 @@
+numbers = input("Please enter a series of numbers, using any separators you like: ")
+separatorss = ""
+
+for char in numbers:
+    if not char.isnumeric():                   # not False -> move next line whereas not True -> move back to first
+        separatorss = separatorss + char
+
+print(separatorss)
+
+values = "".join(char if char not in separatorss else " " for char in numbers).split()
+print(sum([int(val) for val in values]))
