@@ -18,3 +18,41 @@ print(computer_parts[0][0])
 print(computer_parts[1][2])
 print(computer_parts[0])
 print(computer_parts[1])
+
+# The above are example for str sequence type.
+# Note - some sequence type cant be concatenated or multiplied eg. range that cant be concatenated.
+
+# SEQUENCE OPERATOR
+
+string1 = "he's "
+string2 = "probably "
+string3 = "pining "
+string4 = " for the "
+string5 = "fjords"
+
+print(string1 + string2 + string3 + string4 + string5)
+print("hello " * 5)
+
+print()
+# print("Hello " * 5 + 4)
+# TypeError: can only concatenate str (not "int") to str
+print(" Hello " * (5+4))
+print(" Hello " * 5 + "4")
+
+# Operator to check if one string is sub-string of another
+today = "friday"
+print("day" in today)   # this condition is TRUE if the 1st thing exists in 2nd - True
+print("fri" in today)  # True
+print("fir" in today) # False
+print("thur" in today) # False
+print("parrot" in " fjord") # false
+
+# STRING REPLACEMENT FIELDS
+age = 24
+print("My age is " + str(age) + " years")
+
+# better way to do the same task with replacement field -- using .format() list
+print("My age is {0} years ".format(age))
+
+print("There aee {0} days in {1}, {2}, {3}, {5}, {6} and {7} "
+      .format(31, "Jan", "Mar", "May", "Jul", "Aug", "Oct", "Dec"))
