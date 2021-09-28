@@ -1,0 +1,41 @@
+# CONTINUE (with LOOPS)
+# Note: Sometimes, we may need to intruppt the normal flow of a loop, either to jump out of it completely, or
+# to stop the current iteration and move on to the next one.
+
+# Some example to show how they work :
+# List - is an ordered sequence of values, enclosed in square brackets.
+
+shopping_list = ["milk", "pasta", "eggs", "spam", "bread", "rice"]
+#for item in shopping_list:
+#    if item != "spam":
+#        print("Buy " + item)
+
+for item in shopping_list:
+    if item == "spam":
+        continue
+
+    print("Buy " + item)
+    
+    print()
+
+# BREAK
+for item in shopping_list:
+    if item == "spam":
+        break
+
+    print("Buy " + item)
+
+print()
+
+item_to_find = "spam"
+found_at = None           # constant
+
+# In the following program we will loop over the index position rather the item itself
+
+# for index in range(60:
+for index in range(len(shopping_list)):
+    if shopping_list[index] == item_to_find:
+        found_at = index
+        break                       # check the loop without the break statement and with the break statement
+
+print("Item found at position {}". format(found_at))
