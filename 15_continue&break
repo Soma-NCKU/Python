@@ -27,7 +27,7 @@ for item in shopping_list:
 
 print()
 
-item_to_find = "spam"
+item_to_find = "albatross"     # enter the item name
 found_at = None           # constant
 
 # In the following program we will loop over the index position rather the item itself
@@ -39,3 +39,10 @@ for index in range(len(shopping_list)):
         break                       # check the loop without the break statement and with the break statement
 
 print("Item found at position {}". format(found_at))
+
+# Another way to write
+
+if found_at is not None:
+    print("Item found at position {}".format(found_at))
+else:
+    print("{} not found".found(item_to_find))
