@@ -1,4 +1,4 @@
-# CONTINUE (with LOOPS)
+# CONTINUE (with LOOPS) -------------------------
 # Note: Sometimes, we may need to intruppt the normal flow of a loop, either to jump out of it completely, or
 # to stop the current iteration and move on to the next one.
 
@@ -18,7 +18,7 @@ for item in shopping_list:
     
     print()
 
-# BREAK
+# BREAK --------------------------------------
 for item in shopping_list:
     if item == "spam":
         break
@@ -40,9 +40,20 @@ for index in range(len(shopping_list)):
 
 print("Item found at position {}". format(found_at))
 
-# Another way to write
+# Another way to write ------------------------------------
 
 if found_at is not None:
     print("Item found at position {}".format(found_at))
 else:
     print("{} not found".found(item_to_find))
+
+# Much easier way to write the above code ------------------------------
+
+if item_to_find in shopping_list:
+    found_at = shopping_list.index(item_to_find)
+
+if found_at is not None:
+    print("Item found at position {}".format(found_at))
+else:
+    print("{} not found".found(item_to_find))
+
