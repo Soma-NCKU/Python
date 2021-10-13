@@ -1,0 +1,145 @@
+# Note: List are mutable and string are immutable
+
+# Sequence Operations
+
+L = [123, 'spam', 1.23]
+print(len(L))
+
+# ---------------------------------------------------------------
+# Index, slicing and concatenation
+
+print(L[0])
+print(L[:-1])
+print(L + [4, 5, 6])
+
+# -----------------------------------------------------------------
+# Type-Specific Operations - append, pop, sort, reverse
+
+print(L.append('NI'))
+print(L.pop(1))
+
+M =['ff', 'dd', 'aa']
+print(M)
+M.sort()
+print(M)
+M.reverse()
+print(M)
+
+# --------------------------------------------------------
+# Nesting
+
+Mm = [[1,2,3],
+     [4,5,6],
+     [7,8,9]]   # 3x3 matrix
+print(Mm)
+print(Mm[1])     # Get row 2
+print(Mm[1][2])  # Get row 2 , then get 3 item within the row
+
+# ----------------------------------------------------------------------
+# List Comprehensions
+# Syntax: [expression for item in list]
+
+# Example 1.1 - Iterating through a string Using for Loop
+h_letters = []
+
+for letter in "human":
+    h_letters.append(letter)
+
+print(h_letters)
+
+# Example 1.2 - Iterating through a string using List comprehension
+g_letters = [letter for letter in "humans"]
+print(g_letters)
+
+# ---------------------------------------------------------------
+# List Comprehension Vs Lambda function
+
+i_letters = list(map(lambda x: x, 'human'))
+print(i_letters)
+
+# ---------------------------------------------------------------
+# Conditionals in List Comprehension - List comprehension can utilize
+# conditional statement to modify existing list (or other tuples)
+
+# We will create list that uses mathematical operators, integers, and range().
+
+Mm = [[1,2,3],
+     [4,5,6],
+     [7,8,9]]
+
+print([row[1] for row in Mm])
+print([row[0]+1 for row in Mm])
+
+# using if condiiton
+print([row[2] for row in Mm if row[1] % 2 == 0])   # filter out odd items using the % modulus expression
+print([row[2] for row in Mm if row[2] % 2 == 0])   # filter out odd items using the % modulus expression
+
+# using range
+number_list = [x for x in range(21) if x % 2 == 0]
+print(number_list)
+
+num_list = []
+for x in range(21):
+    if x % 2 == 0:
+        num_list.append(x)
+print(num_list)
+
+# another example
+mainList = [[9, 5], [17, 3], [23, 1], [9, 2]]
+secondaryList = [9, 12, 28, 23, 1, 6, 95]
+myNewList = []
+
+myNewList.append([[a, b] for a, b in mainList if a in secondaryList])
+
+
+# Here, for instance, we use list comprehension to step over a hardcoded list of coordinates and a string:
+Mm = [[1,2,3],
+     [4,5,6],
+     [7,8,9]]
+
+diag = [Mm[i][i] for i in [0, 1, 2]]
+print(diag)
+
+doubles = [c * 2 for c in 'spam']
+print(doubles)
+
+# -------------------------------------------------------------------
+# In Python, comprehension syntax in parentheses can also be used to create generators
+# that produces results on demand (the sum built-in, for instance, sums items in a sequence):
+G = (sum(row) for row in Mm)     # Create a generator for row sums
+print(next(G))                   # iter(G) not required here
+print(next(G))                   # Run the iteration protocol
+print(next(G))
+
+# map built-in can do similar work, by generating the results of running items through a function.
+# Wrapping it in list forces it to return all its values in Python 3:
+
+print(list(map(sum, Mm)))
+
+# ----------------------------------------------------------------------
+# Creating sets and dictionaries:
+Mm = [[1,2,3],
+     [4,5,6],
+     [7,8,9]]
+Gg = {sum(row) for row in Mm} # Create a set of row sums  -- ?
+print(Gg)
+
+Hh = {i:sum(Mm[i]) for i in range(3)}
+print(Hh)
+
+# ---------------------------------------------------------
+# In fact, lists, sets, and dictionaries can all be built with comprehension in 3.0:
+
+Xx = [ord(x) for x in 'spaam']  # List of characters
+print(Xx)
+
+Yy = {ord(x) for x in 'spaam'}  # sets remove duplicates
+print(Yy)
+
+Zz = {x:ord(x) for x in 'spaam'}  # dictionary keys are unique
+print(Zz)
+
+
+
+
+
