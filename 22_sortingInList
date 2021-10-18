@@ -1,0 +1,32 @@
+even = [2, 4, 6, 8]
+odd = [1, 3, 5, 7, 9]
+
+print(even)
+
+even.extend(odd)
+print(even)
+# Remember sort method does not create a copy of an item or list we are sorting.
+even.sort(reverse = True)
+print(even)
+
+print("--"*40)
+
+pangram = "The quick brown for jumps over the lazy dog"
+
+letters = sorted(pangram)
+print(letters)
+
+print()
+
+numbers = [2.3, 4.6, 8.7, 3.1, 9.2, 1.6]
+
+sorted_numbers = sorted(numbers)
+print(numbers)
+print(sorted_numbers)
+
+numbers.sort()
+print(numbers)
+
+# try to understand but don't use it
+another_sorted_numbers = numbers.sort()
+print(another_sorted_numbers)
