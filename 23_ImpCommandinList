@@ -1,0 +1,97 @@
+pangram = "The quick brown for jumps over the lazy dog"
+
+letters = sorted(pangram)
+print(letters)
+
+print()
+
+numbers = [2.3, 4.6, 8.7, 3.1, 9.2, 1.6]
+
+sorted_numbers = sorted(numbers)
+print(numbers)
+print(sorted_numbers)
+
+numbers.sort()
+print(numbers)
+
+# try to understand but don't use it
+another_sorted_numbers = numbers.sort()
+print(another_sorted_numbers)
+
+# Case-insensitive sorting
+
+missing_letter = sorted("The quick brown for jumped over the lazy dog")
+print(missing_letter)
+
+missing_letter = sorted("The quick brown for jumped over the lazy dog", key = str.casefold)
+print(missing_letter)
+
+names = ["Graham",
+         "John",
+         "Eric",
+         "michael",
+         "terry",
+         "Soma",
+         "Terry"
+         ]
+print(names)
+names.sort(key=str.casefold)
+print(names)
+
+print()
+
+empty_list = []
+even = [2, 4, 6, 8]
+odd = [1, 3, 5, 7, 9]
+
+numbers = even + odd
+print(numbers)
+
+sorted_numbers = sorted(numbers)
+print(sorted_numbers)
+print(numbers)
+
+digits = sorted("43567289")
+# string of item
+print(digits)
+
+# observe the difference between sorted and list
+digits = list("43567289")
+print(digits)
+
+# observe the difference between sorted and list
+digits = list("43567289")
+print(digits)
+
+more_number = list(numbers)
+print(numbers is more_number)
+print(numbers == more_number)
+
+more_numbers = numbers[:]
+print(numbers)
+print(more_numbers)
+
+# copy method add to python3.3
+more_numbers = numbers.copy()
+print(more_numbers)
+
+# Indexing method
+
+computer_parts = ["computer",
+                  "monitor",
+                  "keyborad",
+                  "mouse",
+                  "mouse pad"
+                  ]
+
+print(computer_parts)
+
+computer_parts[3] = "trackball"
+print(computer_parts)
+
+print(computer_parts[2:])
+computer_parts[2:] = "snowball"
+print(computer_parts)
+computer_parts[2:] = ["snowball"]
+print(computer_parts)
+
