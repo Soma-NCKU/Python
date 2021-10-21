@@ -1,0 +1,62 @@
+menu = [
+    ["egg", "bacon"],
+    ["egg", "sausage", "bacon"],
+    ["egg", "spam"],
+    ["egg", "bacon", "spam"],
+    ["egg", "bacon", "sausage", " tomato"],
+    ["spam", "bacon", "sausage", "spam", "tomato", "spam", "spam"],
+    ["spam", "eggs", "spam", "bacon", "spam"]
+]
+
+# ---------------------------------------------------------------------
+# My solution:
+new_menu = []
+for num_list in menu:
+    if "spam" in num_list:
+        new_menu.append([item for item in num_list if item != "spam"])
+    else:
+        new_menu.append(num_list)
+
+print(new_menu)
+
+print('*'* 80)
+print()
+
+# ---------------------------------------------------------------------
+# Solution provided --------------------
+# Another approach :
+for meal in menu:
+    # Using indexing method
+    for index in range(len(meal) - 1, -1, -1):
+        if meal[index] == "spam":
+            del meal[index]
+
+    print(meal)
+
+
+print('*'*80)
+print()
+
+# ---------------------------------------------------------------------
+# Another approach
+for meal in menu:
+    for item in meal:
+        if item != "spam":
+            print(item)
+    print()
+
+
+print('*'*80)
+print()
+# ---------------------------------------------------------------------
+# generator method
+
+for meal in menu:
+    # Using indexing method
+    for index in range(len(meal) - 1, -1, -1):
+        if meal[index] == "spam":
+            del meal[index]
+
+    print(", ".join(meal))
+
+
