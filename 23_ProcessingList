@@ -1,0 +1,66 @@
+# --------------------------------------
+# Some examples
+
+even = [2, 4, 6, 8]
+odd = [1, 3, 5, 7, 9]
+
+number = [even, odd]
+print(number)
+
+for number_list in number:
+    print(number_list)
+
+    for value in number_list:
+        print(value)
+
+print("*" * 80)
+
+menu = [
+    ["egg", "bacon"],
+    ["egg", "sausage", "bacon"],
+    ["egg", "spam"],
+    ["egg", "bacon", "spam"],
+    ["egg", "bacon", "sausage", " tomato"],
+    ["spam", "bacon", "sausage", "spam", "tomato", "spam", "spam"],
+    ["spam", "eggs", "spam", "bacon", "spam"]
+]
+
+for meal in menu:
+    if "spam" not in meal:
+        print(meal)
+
+        for item in meal:
+            print(item)
+    else:
+        print("{0} has a spam score of {1}".format(meal, meal.count("spam")))
+
+# --------------------------
+
+# We are practicing processing a nested list here. Don't worry too much about formatting your output.
+# Mini Challenge: Write code to print out all the meals in the menu, but with spam removed.
+# Hint: You can choose which approach you want to use : (1) Remove spam from each list, then print the list
+# (2) Print out the items in each list, as long as it's not spam.
+
+
+menu = [
+    ["egg", "bacon"],
+    ["egg", "sausage", "bacon"],
+    ["egg", "spam"],
+    ["egg", "bacon", "spam"],
+    ["egg", "bacon", "sausage", " tomato"],
+    ["spam", "bacon", "sausage", "spam", "tomato", "spam", "spam"],
+    ["spam", "eggs", "spam", "bacon", "spam"]
+]
+
+# Answer : - 
+new_menu = []
+for num_list in menu:
+    if "spam" not in num_list:
+        new_menu.append(num_list)
+        #print(new_menu)
+    else:
+        # Using list comprehension 
+        new_menu.append([item for item in num_list if item != "spam"])
+        #print(new_menu)
+
+print(new_menu)
