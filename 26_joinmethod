@@ -1,0 +1,23 @@
+# Use of join method
+
+flowers = [
+    "Daffodil",
+    "Evening Primrose",
+    "Hydrangea",
+    "Iris",
+    "Lavender",
+    "Sunflower",
+    "Tiger Lily"
+]
+
+for flower in flowers:
+    print(flower)
+
+separator = ", "
+output = separator.join(flowers)
+print(output)
+
+# or
+print(", ".join(flowers))
+
+# Note: All the items in the list must be string if one wish to use "join method".
