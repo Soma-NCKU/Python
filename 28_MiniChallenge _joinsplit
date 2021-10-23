@@ -1,0 +1,40 @@
+# join method will create a string from a sequence such as a list split as shown above.
+# whereas, split method will string up the string and create a list.
+# Split is very useful when reading data from a file , for instance.
+
+# Mini-Challenge
+# USe a for loop to replace all the string in that above list with integer values.
+
+# In other words, use a for loop to produce a list of ints rather than strings.
+print("-" * 80)
+print(type(values_new))
+
+value_item = []
+for item in values_new:
+    #print(item)
+    value_item.append(int(item))
+
+print(value_item)
+
+# ------------------------------------
+# another example string data (str) and interge data (int)
+print("*" * 80)
+a = '2'
+b = '3'
+
+# print the data type of a and b
+print(type(a))
+print(type(b))
+
+# convert a using float
+a = float(a)
+
+# convert b using int
+b = int(b)
+
+# sum both integers
+sum = a + b
+
+# as strings and integers can't be added
+# try testing the sum
+print(sum)
