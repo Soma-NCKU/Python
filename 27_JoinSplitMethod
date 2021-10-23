@@ -1,0 +1,53 @@
+# ----------------------------------------------
+# Use of join method
+
+flowers = [
+    "Daffodil",
+    "Evening Primrose",
+    "Hydrangea",
+    "Iris",
+    "Lavender",
+    "Sunflower",
+    "Tiger Lily"
+]
+
+for flower in flowers:
+    print(flower)
+
+separator = ", "
+output = separator.join(flowers)
+print(output)
+
+# (or)
+print(", ".join(flowers))
+
+# Note: All the items in the list must be string if one wish to use "join method".
+
+# ------------------------------
+# Use of Split method - it splits a string into words.
+
+# panagram = " the quick brown fox jumps over the lazy dog"
+panagram = """the quick brown 
+fox jumps\tover the lazy dog """
+
+words = panagram.split()
+print(words)
+
+#-----------------------------------
+# Another examples
+
+numbers = "9,223,372,036, 865, 775,807"
+print(numbers.split(","))
+
+generated_list = ['9', ' ',
+                  '2', '2', '3', ' ',
+                  '3', '7', '2', ' ',
+                  '0', '3', '6', ' ',
+                  '8', '5', '4', ' ',
+                  '8', '0', '7']
+#values = "".join(generated_list).split()
+values = "".join(generated_list)
+print(values)
+
+values_new = values.split()
+print(values_new)
