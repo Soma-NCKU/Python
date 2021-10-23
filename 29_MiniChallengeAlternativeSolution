@@ -1,0 +1,41 @@
+generated_list = ['9', ' ',
+                  '2', '2', '3', ' ',
+                  '3', '7', '2', ' ',
+                  '0', '3', '6', ' ',
+                  '8', '5', '4', ' ',
+                  '8', '0', '7']
+# values = "".join(generated_list).split()
+values = "".join(generated_list)
+print(values)
+
+values_new = values.split()
+print("values_new: {}".format(values_new))
+
+print("*" * 80)
+# join method will create a string from a sequence such as a list split as shown above.
+# whereas, split method will string up the string and create a list.
+# Split is very useful when reading data from a file , for instance.
+
+# Mini-Challenge
+# USe a for loop to replace all the string in that above list with integer values.
+
+# In other words, use a for loop to produce a list of ints rather than strings.
+print("-" * 80)
+print(type(values_new))
+
+
+# 1st method
+value_list = []
+for index in range(len(values_new)):
+    value_list[index] = int(values_new[index])
+
+print(value_list)
+
+# 2nd method - my suggested approach 
+value_item = []
+for item in values_new:
+    #print(item)
+    value_item.append(int(item))
+
+print(value_item)
+print(type(value_item))
