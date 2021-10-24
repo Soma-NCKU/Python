@@ -1,0 +1,45 @@
+# Observe the output
+
+albums1 = [" Welcome to my Nightmare", " Alice Cooper", 1975,
+           "Bad Company", "Bad Company", 1974,
+           "Nightflight", " Budgie", 1981,
+           "More Mayhem", "Emilda May", 2011,
+           "Ride the Lightning", "Metallica", 1984
+           ]
+
+print(len(albums1))
+
+albums = [(" Welcome to my Nightmare", " Alice Cooper", 1975),
+          ("Bad Company", "Bad Company", 1974),
+          ("Nightflight", " Budgie", 1981),
+          ("More Mayhem", "Emilda May", 2011),
+          ("Ride the Lightning", "Metallica", 1984)
+          ]
+
+print(len(albums))
+
+for albums in albums:
+    #print(albums)
+    print("Album: {}, Artist: {}, Year: {}"
+          .format(albums[0], albums[1], albums[2]))
+
+# Mini- Challenge is using only one line code rewrite the above for loop
+
+# Incorrect coding : example below
+#for (name, artist, year) in albums:
+#    print("Album: {}, Artist: {}, Year: {}"
+#          .format(name, artist, year))
+
+# Understand the code below - how to unpack a tuple
+
+for name, artist, year in albums:
+    print("Album: {}, Artist: {}, Year: {}"
+          .format(name, artist, year))
+
+# (or)
+
+for album in albums:
+    name, artist, year = album
+    print("Album: {}, Artist: {}, Year: {}"
+          .format(name, artist, year))
+
