@@ -1,0 +1,56 @@
+# Understand how tuple output looks like
+t = "a", "b", "c"
+print(t)
+
+s = ("a", "b", "c", "d")
+print(s)
+
+# why parenthesis are needed ?
+
+name = "Tim"
+age = 10
+
+# when you print the statement below the output will contain 4 different variables.
+# As print function allow us to print different functions
+print(name, age, "Python", 2020)
+
+# print the above with parenthesis and observe the output .. we get a tuple
+print((name, age, "Python", 2020))
+
+# Python 3.8 added ASSIGNMENT EXPRESSIONS to the language - in PEP 572. They use what's infromally referred
+# to as the WALRUS OPERATOR.
+# Note: One must remember if you use a tuple after the walrus operator, and dont enclose it in parenthesis.
+# If the code compiles, it probably wont do what you expected.
+
+# the Python style guide, PEP8, doesnt have much to say about the parentheses around the tuples.
+
+# WHY TUPLE ARE NECESSARY OR ARE USEFUL ?
+
+welcome = " Welcome to my Nightmare", " Alice Cooper", 1975
+bad = "Bad Company", "Bad Company", 1974
+budgie = "Nightflight", " Budgie", 1981
+imelda = "More Mayhem", "Emilda May", 2011
+metallica = "Ride the Lightning", "Metallica", 1984
+
+print(metallica)
+
+# Tuples are sequence type, which means we can use indexing to access the individual items in the tuple.
+
+print(metallica[0])
+print(metallica[1])
+print(metallica[2])
+
+# Lets make a mistake and observe the output error
+metallica[0] = "Master of Puppets"
+
+# create a list and oberve the change in the output 
+metallica2 = list(metallica)
+print(metallica2)
+
+metallica2[0] = "Master of Puppets"
+print(metallica2)
+
+
+
+# https://docs.python.org/3/library/stdtypes.html#common-sequence-operations
+# https://docs.python.org/3/library/functions.html
