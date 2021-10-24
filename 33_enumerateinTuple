@@ -1,0 +1,38 @@
+# use of enumerate function
+# Observe the output of the enumerate function
+for index, character in enumerate("abcdefgh"):
+    print(index, character)
+
+print("-"* 80)
+# this following output will give a tuple
+# we use one one variable in the following code which result into tuple
+for t in enumerate("abcdefgh"):
+    #print(t)
+    index, character = t
+    print(index, character)
+
+index, character = (0, "a")
+print(index)
+print(character)
+
+print('*' * 80)
+
+print("Unpacking tuple is very helpful")
+
+welcome = " Welcome to my Nightmare", " Alice Cooper", 1975
+bad = "Bad Company", "Bad Company", 1974
+budgie = "Nightflight", " Budgie", 1981
+imelda = "More Mayhem", "Emilda May", 2011
+metallica = "Ride the Lightning", "Metallica", 1984
+
+title, artist, year = metallica
+print(title)
+print(artist)
+print(year)
+
+table = ("coffee table", 200, 100, 75, 34.50)
+print(table[1] * table[2])
+
+name, length, width, height, price = table
+print(length*width)
+
