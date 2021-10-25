@@ -1,0 +1,26 @@
+from jukedemo import albums
+
+#print(albums)
+
+while True:
+    print("Please choice your album(invalid choice exist: ")
+    # Observe the change in output
+    # case 1
+    #for index, title, artist, year, songs in enumerate(albums):
+    # case 2 - unpacking is done in one line
+    for index, (title, artist, year, songs) in enumerate(albums):
+        print("{}: {}, {}, {}, {}"
+              .format(index + 1, title, artist, year, songs))
+
+    # Another way
+    for index, value in enumerate(albums):
+        # enumerate returns index and a tuple
+        print(index, value)
+        # since it contain a tuple we
+        # should be able to unpack it , but we can't
+
+    for index, value in enumerate(albums):
+        title, artist, year, songs = value
+        print(index, title, artist, year, songs)
+
+    break
