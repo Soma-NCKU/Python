@@ -1,0 +1,60 @@
+# Nested data structures - how data is created
+# Important and could be confusing so pay attention
+
+albums = [(" Welcome to my Nightmare", " Alice Cooper", 1975,
+           [
+               (1, "Welcome to my Nightmare"),
+               (2, "Devil's food"),
+               (3, "The black widow"),
+               (4, "Some folks")
+           ]
+           ),
+          ("Bad Company", "Bad Company", 1974,
+           [
+               (1, "Cant get enough"),
+               (2, "Rock steady"),
+               (3, "Ready for love")
+           ]
+           ),
+          ("Nightflight", " Budgie", 1981,
+           [
+               (1, " The way I choose"),
+               (2, "Movin on"),
+               (3, "Dont let me down")
+           ]
+           ),
+          ("More Mayhem", "Emilda May", 2011,
+           [
+               (1, " Seagull"),
+               (2, "Bad company")
+           ]
+           ),
+          ("Ride the Lightning", "Metallica", 1984,
+           [
+               (1, "Pulling the rug")
+           ]
+           )
+          ]
+
+for name, artist, year, songs in albums:
+    print("Album: {}, Artist: {}, Year: {}, Songs: {}"
+          .format(name, artist, year, songs))
+
+print()
+album = albums[4]
+print(album)
+
+print()
+songs_list = album[3]
+print(songs_list)
+
+song_index = songs_list[0]
+print(song_index)
+
+song_name = song_index[1]
+print(song_name)
+
+pultherug = albums[4][3][0][1]
+print(pultherug)
+
+print(albums[3][3][1][1])
