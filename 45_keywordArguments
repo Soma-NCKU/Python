@@ -1,0 +1,20 @@
+def banner_text(text = " ", screen_width = 50):
+    #screen_width = 50  # play with the width
+    if len(text) > screen_width - 4:
+        #print("EEK!! The text is too long to fit in the specified width")
+        raise ValueError("String {0} is large then specified with {1}"
+                         .format(text, screen_width))
+
+    if text == "*":
+        print('*' * screen_width)
+    else:
+        centred_text = text.center(screen_width - 4)
+        out_string = "**{0}**".format(centred_text)
+        print(out_string)
+
+
+banner_text("*", 60)
+banner_text("When you're feeling low", 60)
+banner_text(screen_width = 60)
+banner_text("Always look on the bright side of life ..", 60)
+banner_text("*", 60)
