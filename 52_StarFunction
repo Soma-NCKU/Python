@@ -1,0 +1,25 @@
+# Star numbers
+numbers = (0, 1, 2, 3, 4, 5)
+
+# Observe the change in the output
+print("Output is a packed tuple: {}".format(numbers))
+print("Output is a unpacked tuple: {} {} {} {} {} {}".format(*numbers))
+print(*numbers)
+print()
+print(numbers, sep = ";")
+print(*numbers, sep = ";")
+print(0, 1, 2, 3, 4, 5, sep = ";")
+
+print('*' * 80)
+
+# Note: * means that the parameter will be replaced by an unpacked tuple.
+# * - allow us to pass multiple variable 
+
+def test_star(*args):
+    print(args)
+    for x in args:
+        print(x)
+
+test_star(0, 1, 2, 3, 4, 5)
+# no argument
+test_star()
