@@ -1,0 +1,49 @@
+def fizz_buzz(n: int) -> str:
+    """
+    Play fizz_buzz
+
+    :param n: Enter a integer number
+    :return: fizz if  `n` is divisible by 3,
+        buzz if `n` is divisible by 5,
+        fizz_buzz if `n` is divisible by 15
+    """
+    if n % 3 == 0:
+        return "fizz"
+    elif n % 5 == 0:
+        return "bizz"
+    # elif n % 3 == 0 and n % 5 == 0:
+    #    return "fizz_buzz"
+    elif n % 15 == 0:
+        return "fizz_buzz"
+    else:
+        return str(n)
+
+
+for i in range(1, 50):
+    print(fizz_buzz(i))
+
+# Next Challenge is replace the loop with a loop that will play the game.
+# The computer will start with the value 1.
+# The player and computer will then take turns.
+# The game ends when the player makes a mistake, or gets to 100.
+
+input("Let's play Fizz Buzz. Press ENTER to start")
+print()
+
+
+next_number = 0
+while next_number < 99:
+    # the computer starts the game
+    next_number += 1
+    print(fizz_buzz(next_number))
+    # Players turn so we first increment the number
+    next_number += 1
+    correct_answer = fizz_buzz(next_number)
+    print(correct_answer)
+    #players_answer = correct_answer
+    players_answer = input("Your go: ")
+    if players_answer != correct_answer:
+        print("You lose, the correct answer was {}".format(correct_answer))
+        break
+else:
+    print("Well done, you reached {}".format(next_number))
