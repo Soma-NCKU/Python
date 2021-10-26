@@ -1,0 +1,45 @@
+def func(p1, p2, *args, k, **kwargs):
+    print("positional-or-keyword: ...{}, {}".format(p1, p2))
+    print("var-positional (*args):...{}".format(args))
+    print("keyword:..................{}".format(k))
+    print("var-keyword:..............{}".format(kwargs))
+
+
+
+func(1, 2, 3, 4, 5, k=6, key1=7, key2 =8)
+func(1, 2, 3, 4, 5, 7, k=[], key1=7, key2 =8)
+# Observe the output error message
+#func(1, 2, 3, 4, 5, 6, key1=7, key2 =8)
+
+# --------------------------------------------------------------------------------
+# Mini-Challenge
+
+# Write a function to calculate the sum of all numbers passed as its arguments.
+# Call your function as sum_numbers and show define a single variable argument
+# that will get the values to sum.
+# To pass in this on-line interpreter, your function must contain a Docstring.
+
+
+
+def sum_numbers(*args: float) -> float:
+    """ calculate the sum of numbers """
+    print("List of numbers provided: {}".format(args))
+    result = 0
+    for n in args:
+        result = result + n
+    return result
+
+
+print(sum_numbers(1, 2, 3, 4, 5))
+
+
+# (or)
+
+def sum_number(*args: float) -> float:
+    """ calculate the sum of numbers """
+    return sum(args)
+
+
+print(sum_number(12.5, 3.147, 98.1))
+
+
