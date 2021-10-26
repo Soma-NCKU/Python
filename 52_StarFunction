@@ -23,3 +23,26 @@ def test_star(*args):
 test_star(0, 1, 2, 3, 4, 5)
 # no argument
 test_star()
+
+# Parameter Types
+# Rules :
+
+"""
+-- Parameter Types
+-- Rules
+
+Any positional-or-keyword arguments that we define, 
+MUST come first in the parameter list.
+
+If we have a var-positional parameter - that's a parameter 
+that starts with *- then it must come after any 
+positional-or-keyword arguments.
+
+There's a good reason for that,
+- Any parameters defined after a var-positional parameter 
+must be keyword-only argument (which includes var-keyword arguments).
+- Finally, any var-keyword arguments appear last.
+
+"""
+
+
