@@ -1,0 +1,68 @@
+from contents_quantities import pantry, recipes
+
+print(pantry)
+print(recipes)
+
+def add_shopping_item(data: dict, item: str, amount: int) -> None:
+    """ Add a tuple containing `item` and `amount` to the `data` dict. """
+    #data.append((item, amount))
+    if item in data:
+        data[item] += amount
+    else:
+        data[item] = amount
+
+
+
+# Advance way - dictionary comprehension
+display_dict = {str(index + 1): key for index, key in enumerate(recipes)}
+
+# Naive way
+display_dict = {}
+for index, key in enumerate(recipes):
+    # print(index + 1, key)
+    display_dict[str(index + 1)] = key
+
+shopping_list = {}
+while True:
+    # Display a menu of the recipes we know how to cook
+    print("Please choose your recipe")
+    print("-------------------------")
+    for key, value in display_dict.items():
+        print(f"{key} - {value}")
+    print(f"0 - to exit")
+
+    choice = input(": ")  # str since index is entered as string
+
+    if choice == "0":
+        break
+    elif choice in display_dict:
+        selected_item = display_dict[choice]   # value is converted back to key
+        print(f"You have selected {selected_item}")
+        print("Checking ingredients ...")
+        ingredients = recipes[selected_item]  # key is used to find the value from another dict
+        print(ingredients)
+
+# Understand: The enumerate function takes each of the keys from the dictionary,
+# generates the next number for each one, and emits both values as a tuple.
+
+        for food_item, required_quantity in ingredients.items():
+            quantity_in_pantry = pantry.get(food_item, 0)
+
+# Reason we used .get() method here instead of indexing is because .get() wont crash the
+# crash the program if an item is missing. Instead for the missing item it will return zero.
+            if required_quantity <= quantity_in_pantry:
+                print(f"\t{food_item} OK")
+            else:
+                quantity_to_buy = required_quantity - quantity_in_pantry
+                print(f"\tYou to buy the necessary ingredient: {quantity_to_buy}")
+                add_shopping_item(shopping_list, food_item, quantity_to_buy)
+
+
+#for things in shopping_list:
+#    print(things)
+
+#for things in sorted(shopping_list):
+#    print(things)
+
+for things in shopping_list.items():
+    print(things)
