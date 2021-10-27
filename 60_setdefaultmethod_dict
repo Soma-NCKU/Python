@@ -1,0 +1,11 @@
+from contents_quantities import pantry
+
+chicken_quantity = pantry.setdefault("chicken", 0)
+print(f"chicken: {chicken_quantity}")
+
+grain_quantity = pantry.setdefault("grain", 0)
+print(f"grain: {grain_quantity}")
+
+print()
+for key, value in sorted(pantry.items()):
+    print(f"{key}: {value}")
