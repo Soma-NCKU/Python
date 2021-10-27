@@ -1,0 +1,148 @@
+d = {
+    0: "zero",
+    1: "one",
+    2: "two",
+    3: "three",
+    4: "four",
+    5: "five",
+    6: "six",
+    7: "seven",
+    8: "eight",
+    9: "nine",
+    "v": "five"
+}
+
+pantry_items = ['chicken', 'spam', 'egg', 'bread', 'lemon']
+
+
+# Observe the outputs
+new_dict = dict.fromkeys(pantry_items)
+print(new_dict)
+
+new_dict = dict.fromkeys(pantry_items, 0)
+print(new_dict)
+
+keys = d.keys()
+print(keys)
+
+# for item in d:
+for item in d.keys():
+    print(item)
+
+# ********************************************
+# Code for " the remaining `dict` methods"
+
+d2 = {
+    7: "lucky seven",
+    10: "ten",
+    3: "this is new three",
+}
+
+d.update(d2)
+for key, value in d.items():
+    print(key, value)
+
+print()
+
+d.update(enumerate(pantry_items))
+for key, value in d.items():
+    print(key, value)
+
+# Code for `the dict `.
+
+v = d.values()
+print(v)
+
+d[10] = "TEN"
+print(v)
+
+# Here, we understand that vale exist but we have no idea about its key
+print("five" in v)
+print("Five" in v)
+
+# One way to find its key is given below,
+# (but this method is not very efficient
+# as it needs lot of memory if the dict is large)
+keys = list(d.keys())
+print(keys)
+values = list(v)  # -> list(d.vales())
+print(values)
+if "five" in values:
+    index = values.index("five")
+    key = keys[index]
+    print(f"{d[key]} was found with the key {key}")
+
+# alternative way
+print()
+
+for key, value in d.items():
+    if value == "five":
+        print(f"{d[key]} was found with the key {key}")
+
+
+# ------------------------------
+# Sallow copy
+
+animals = {
+    "lion": "scary",
+    "elephant": "big",
+    "teddy": "cuddly"
+}
+
+#things = animals
+things = animals.copy()
+animals["teddy"] = "toy"
+print(things["teddy"])
+print(animals["teddy"])
+
+print()
+
+# Observe the output carefully.
+animalsnew = {
+    "lion": ["scary", "big", "cat"],
+    "elephant": ["big", "grey", "wrinkled"],
+    "teddy": ["cuddly", "stuffed"],
+}
+
+thingsnew = animalsnew.copy()
+#animalsnew["teddy"] = "toy"
+print(thingsnew["teddy"])
+print(animalsnew["teddy"])
+
+thingsnew["teddy"].append("toy")
+print(thingsnew["teddy"])
+print(animalsnew["teddy"])
+
+# ---------------------
+print()
+
+lion_list = ["scary", "big", "cat"]
+elephant_list = ["big", "grey", "wrinkled"]
+teddy_list = ["cuddly", "stuffed"]
+
+animalsnew2 = {
+    "lion": lion_list,
+    "elephant": elephant_list,
+    "teddy": teddy_list,
+}
+
+#thingsnew2 = animalsnew2.copy()
+
+thingsnew2 = {
+    "lion": lion_list,
+    "elephant": elephant_list,
+    "teddy": teddy_list,
+}
+
+print("-"* 80)
+print(thingsnew2["teddy"])
+print(animalsnew2["teddy"])
+
+print("-"* 80)
+#thingsnew2["teddy"].append("toy")
+teddy_list.append("toy")
+animalsnew2["teddy"].append("added via `animals`")
+thingsnew2["teddy"].append("added via `things`")
+print(thingsnew2["teddy"])
+print(animalsnew2["teddy"])
+print(teddy_list)
