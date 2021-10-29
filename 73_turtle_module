@@ -1,0 +1,25 @@
+import turtle    # from turtle import * # * way is not advicible 
+import time
+
+# noinspection PyUnresolvedReferences
+turtle.forward(150)
+turtle.right(250)
+turtle.forward(150)
+
+time.sleep(4)
+
+# Try uncommenting this and use time module
+# turtle.done()
+
+# ------------------------------------------------------
+from turtle import forward, right, done
+
+forward(150)
+right(250)
+forward(150)
+
+# the follwoing wil show error
+turtle.circle(75)
+circle(75)
+
+done()
