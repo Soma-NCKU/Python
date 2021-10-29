@@ -1,0 +1,38 @@
+from prescription_data import *
+
+
+#trial_patients = ["Denise", "Eddie", "Frank", "Georgia"]
+trial_patients = ["Denise", "Eddie", "Frank", "Georgia", "Kenny"]
+
+print()
+
+for patient in trial_patients:
+    prescription = patients[patient]
+    # Add condition
+    if warfarin in prescription:
+    # Observe the output
+        prescription.remove(warfarin)
+    #prescription.discard(warfarin)
+        prescription.add(edoxaban)
+    else:
+        print()
+        print(f"Patient {patient} is not taking Warfarin."
+              f"Please remove {patient} from the trail")
+    print(patient, prescription)
+
+
+print()
+
+# Another alternative (uncomment the above method before running the following )-----------------
+
+# Remove Warfarin and add Edoxaban
+for patient in trial_patients:
+    prescription = patients[patient]  # patients[key_name]
+    try:
+        #prescription.discard(warfarin)
+        prescription.remove(warfarin)
+        prescription.add(edoxaban)
+    except KeyError:                       # exception handler
+        print(f"Patient {patient} is not taking Warfarin."
+              f" Please remove {patient} from the trial")
+    print(patient, prescription)
