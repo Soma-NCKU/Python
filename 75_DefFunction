@@ -1,0 +1,5 @@
+def python_food():
+    print("spam and egg")
+
+# call the function but here no argument is mentioned
+print(python_food())
