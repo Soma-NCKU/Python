@@ -5,7 +5,7 @@ for m in dir(__builtins__):
     print(m)
     
     
-
+# -----------------------------------
 import shelve
 
 print(dir())
@@ -15,3 +15,11 @@ print(dir(shelve))
 for obj in dir(shelve.Shelf):
     if obj[0] !='-':
         print(obj)
+     
+     
+# -------------------------------------    
+import webbrowser
+
+webbrowser.open("https://www.python.org/")
+
+
