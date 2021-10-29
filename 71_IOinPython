@@ -1,0 +1,60 @@
+jabber = open("\\User\\dev\\Desktop\\sample.txt","r")
+
+for line in jabber:
+    print(line)
+
+jabber.close()
+
+# ---------------------------------------------------------
+
+for line in jabber:
+    if "jabberwock" in line.lower():
+        print(line, end="")
+        
+jabber.close()
+
+# --------------------------------------------------------
+
+# ----------------------------------
+
+# more concise way to read a file 
+
+with open("sample.txt", 'r') as jabber:
+    for line in jabber:
+        if "JAB" in line.upper():
+            print(line, end="")
+            
+# (or)
+
+with open("sample.txt", 'r') as jabber:
+    line = jabber.readline()
+    while line:
+        print(line, end="")
+        line = jabber.readline()
+        
+# (or)
+
+with open("sample.txt", 'r') as jabber:
+    lines = jabber.readline()
+print(lines)
+      
+for lin in lines:
+    print(line, end="")
+    
+# (or)
+
+with open("sample.txt", 'r') as jabber:
+    lines = jabber.read()
+print(lines)
+    
+for lin in lines[::-1]:
+    print(line, end="")
+
+# -------------------------------------------------------------------
+# WRITING TO A TEXT FILE IN PYTHON
+
+cities = ["Alice spring", " Melbourne", "Sydney", "Adelaide"]
+
+with open("cities.txt", "w") as city_file:
+    for city in cities:
+        print(city, file=city_file, flush =True)
